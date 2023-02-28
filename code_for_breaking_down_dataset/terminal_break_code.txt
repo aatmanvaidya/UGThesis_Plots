@@ -4,3 +4,6 @@ awk -F, '{print NF; exit}' tweets.csv && wc -l tweets.csv
 
 //splitting the files.
 split -l $(( $(wc -l < tweets.csv) / 2 )) tweets.csv tweets
+
+//checking new final file
+awk -F, '{print NF; exit}' tweets_retweetsFile_full.csv && wc -l tweets_retweetsFile_full.csv
