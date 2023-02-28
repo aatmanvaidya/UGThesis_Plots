@@ -1,3 +1,6 @@
 cat tweets.csv | wc -l
 head -1 tweets.csv | sed 's/,/\t/g' | wc -w
 awk -F, '{print NF; exit}' tweets.csv && wc -l tweets.csv
+
+//splitting the files.
+split -l $(( $(wc -l < tweets.csv) / 2 )) tweets.csv tweets
