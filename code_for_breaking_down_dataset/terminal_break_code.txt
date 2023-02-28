@@ -1,2 +1,3 @@
- cat tweets.csv | wc -l
- head -1 tweets.csv | sed 's/,/\t/g' | wc -w
+cat tweets.csv | wc -l
+head -1 tweets.csv | sed 's/,/\t/g' | wc -w
+awk -F, '{print NF; exit}' tweets.csv && wc -l tweets.csv
