@@ -1,0 +1,2 @@
+ cat tweets.csv | wc -l
+ head -1 tweets.csv | sed 's/,/\t/g' | wc -w
